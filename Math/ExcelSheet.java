@@ -1,0 +1,14 @@
+class Solution {
+    public String convertToTitle(int columnNumber) {
+        //Edge case 
+        if(columnNumber == 0)  {
+            return "";
+        }
+        
+        //Logic here is recursion
+        columnNumber--;
+        char c = (char)('A' + columnNumber % 26);
+        return convertToTitle(columnNumber / 26) + c;
+        
+    }
+}
